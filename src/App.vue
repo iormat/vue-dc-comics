@@ -9,7 +9,7 @@
 <script>
 import Header from './components/Header.vue';
 
-import Footer from './components/Header.vue';
+import Footer from './components/Footer.vue';
 
 
 export default {
@@ -32,9 +32,18 @@ export default {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 20px;
+    text-transform: uppercase;
 }
+
 .container-center {
     width: 80%;
     margin: 0 auto;
+}
+
+.btn {
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #3874D9;
+  padding: 10px;
 }
 </style>

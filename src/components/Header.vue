@@ -82,11 +82,13 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
     header {
+        background-color: #fff;
         padding: 20px 0;
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
+        z-index: 2;
     }
     .container-center {
         display: flex;
@@ -94,16 +96,16 @@ export default {
         align-items: center;
         & img {
             width: 70px;
+            display: block;
         }
     }
     li {
         display: inline-block;
-        margin: 0 20px;
+        margin: 0 15px;
         & a {
-            padding: 20px 0;
+            padding: 40px 0;
             color: #000;
             text-decoration: none;
-            text-transform: uppercase;
             font-size: .8rem;
             font-weight: bold;
         }
@@ -111,6 +113,5 @@ export default {
             color: #377AE4;
             border-bottom: 3px solid #377AE4;
         }
-
     }
 </style>
