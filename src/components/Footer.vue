@@ -1,16 +1,48 @@
 <template>
     <footer>
         <!-- footer up -->
-        <section class="foot_up">
+        <section class="foot_up container-center">
+            <!-- left footer top section -->
             <div class="footup-left">
                 <section class="footer-nav">
+                    <!-- nav dc comics and shop -->
                     <nav>
                         <h3>DC COMICS</h3>
+                        <ul>
+                            <li v-for="link, i in dcComicsArr" :key="i">
+                                <a href="link.url">{{ link.text }}</a>
+                            </li>
+                        </ul>
+                        <!-- nav shop -->
+                        <h3>SHOP</h3>
+                        <ul>
+                            <li v-for="link, i in shopArr" :key="i">
+                                <a href="link.url">{{ link.text }}</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- nav dc -->
+                    <nav>
+                        <h3>DC</h3>
+                        <ul>
+                            <li v-for="link, i in dcArr" :key="i">
+                                <a href="link.url">{{ link.text }}</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- nav sites -->
+                    <nav>
+                        <h3>SITES</h3>
+                        <ul>
+                            <li v-for="link, i in sitesArr" :key="i">
+                                <a href="link.url">{{ link.text }}</a>
+                            </li>
+                        </ul>
                     </nav>
                 </section>
             </div>
+            <!-- right footer top section -->
             <div class="footup-right">
-                <img src="../assets/img/dc-logo-bg.png" alt="logo dc">
             </div>
         </section>
         <!-- footer down -->
@@ -49,56 +81,117 @@ export default {
     name : "Footer",
     data() {
         return {
-            links : [
+            dcComicsArr : [
                 {
-                    title : "dc comics",
                     url : "#",
                     text : "characters",
                 },
                 {
-                    title : "dc comics",
                     url : "#",
                     text : "comics",
                 },
                 {
-                    title : "dc comics",
                     url : "#",
                     text : "movies",
                 },
                 {
-                    title : "dc comics",
                     url : "#",
                     text : "tv",
                 },
                 {
-                    title : "dc comics",
                     url : "#",
                     text : "games",
                 },
                 {
-                    title : "dc comics",
                     url : "#",
                     text : "videos",
                 },
                 {
-                    title : "dc comics",
                     url : "#",
                     text : "news",
                 },
+            ],
+            shopArr : [
                 {
-                    title : "shop",
                     url : "#",
                     text : "shop dc",
                 },
                 {
-                    title : "shop",
                     url : "#",
                     text : "shop dc collectibles",
                 },
 
+            ],
+            dcArr : [
+                {
+                    url : "#",
+                    text : "therms of use",
+                },
+                {
+                    url : "#",
+                    text : "Privacy policy (New)",
+                },
+                {
+                    url : "#",
+                    text : "Ad Choices",
+                },
+                {
+                    url : "#",
+                    text : "Advertising",
+                },
+                {
+                    url : "#",
+                    text : "jobs",
+                },
+                {
+                    url : "#",
+                    text : "Subscriptions",
+                },
+                {
+                    url : "#",
+                    text : "Talent Workshops",
+                },
+                {
+                    url : "#",
+                    text : "CPSC Certificates",
+                },
+                {
+                    url : "#",
+                    text : "Ratinas",
+                },
+                {
+                    url : "#",
+                    text : "Shop Help",
+                },
+                {
+                    url : "#",
+                    text : "Contact Us",
+                },
+            ],
+            sitesArr : [
+                {
+                    url : "#",
+                    text : "dc",
+                },
+                {
+                    url : "#",
+                    text : "MAD Magazine",
+                },
+                {
+                    url : "#",
+                    text : "DC kids",
+                },
+                {
+                    url : "#",
+                    text : "DE Universe",
+                },
+                {
+                    url : "#",
+                    text : "DC Power Visa",
+                },
             ]
         }
-    }
+    },
 }
 </script>
 
@@ -108,12 +201,37 @@ export default {
         background-image: url('../assets/img/footer-bg.jpg');
         background-size: cover;
         color: #fff;
-        & .footup-left {
-            width: 50%;
-        }
     }
     .foot_up {
         display: flex;
+        & .footer-nav {
+            display: flex;
+            & h3 {
+                margin: 20px 0;
+            }
+        }
+        & nav {
+            margin: 0 30px;
+        }
+        & a {
+            text-decoration: none;
+            color: #878585;
+            font-size:.8rem
+        }
+        & .footup-left {
+            width: 50%;
+            padding: 30px 0;
+        }
+        & nav ul li {
+            list-style: none;
+        }
+    }
+
+    .footup-right {
+        background-image: url("../assets/img/dc-logo-bg.png");
+        background-size: cover;
+        background-position: center;
+        width: 50%;
     }
 
     .foot_down {

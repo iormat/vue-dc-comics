@@ -17,7 +17,7 @@ export default {
   components: {
     Header,
     Footer
-  }
+  },
 }
 </script>
 
@@ -41,7 +41,6 @@ export default {
 }
 
 .btn {
-  color: #fff;
   background-color: transparent;
   border: 2px solid #3874D9;
   padding: 10px;
