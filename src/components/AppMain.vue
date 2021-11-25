@@ -1,11 +1,15 @@
 <template>
     <main>
+        <!--header nav contestual section -->
         <section id="comics">
             <h2>current series</h2>
             <section id="comics-cards" class="container-center">
                 <Comicscard v-for="comicsCard, j in comicsArr" :key="j"
                     :cardDetails="comicsCard"/>
             </section>
+            <div class="see-more">
+                <button> <a href="@">load more</a> </button>
+            </div>
         </section>
         <!-- section cards -->
         <section id="link-cards">
@@ -26,7 +30,7 @@
 import Comicscard from "./Comicscard.vue";
 
 export default {
-    name : 'Main',
+    name : 'AppMain',
     components: {
         Comicscard,
     },
@@ -136,57 +140,77 @@ export default {
 </script>
 
 <style scoped lang="scss">
-main {
-    background-color: #000;
-    padding-top: 30px;
-}
-#comics {
-    margin-top: 50px;
-    color: #fff;
-        h2 {
-            background-color: #3880F1;
-            margin-left: 10%;
-            padding: 5px 20px;
-            box-shadow: 5px 0 5px rgba(1, 1, 1, 0.397);
-            display: inline;
-            position: relative;
-            z-index: 1;
-        }
-
-    #comics-cards {
-        padding: 30px 0;
-        display: flex;
-        flex-flow: row wrap;
+    main {
+        background-color: #000;
+        padding-top: 30px;
     }
-}
 
-#link-cards {
-    margin-top: 200px;
-    background-color: #3880F1;
-    & ul {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        & li {
-            list-style: none;
-            & a {
-                width: 20%;
-                display: flex;
-                align-items: center;
-                color: #fff;
-                text-decoration: none;
-                padding: 20px 0;
-                & img {
-                    width: 50px;
-                    height: 50px;
-                    margin-right: 5px;
-                }
-                & p {
-                    font-size: 1rem;
-                    white-space: nowrap;
+    #comics {
+        margin: 50px 0;
+        color: #fff;
+            h2 {
+                background-color: #3880F1;
+                margin-left: 10%;
+                padding: 5px 20px;
+                box-shadow: 5px 0 5px rgba(1, 1, 1, 0.397);
+                display: inline;
+                position: relative;
+                z-index: 1;
+            }
+
+        #comics-cards {
+            padding: 30px 0;
+            display: flex;
+            flex-flow: row wrap;
+        }
+    }
+
+    #link-cards {
+        background-color: #3880F1;
+        & ul {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            & li {
+                list-style: none;
+                & a {
+                    width: 20%;
+                    display: flex;
+                    align-items: center;
+                    color: #fff;
+                    text-decoration: none;
+                    padding: 20px 0;
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        margin-right: 5px;
+                    }
+                    p {
+                        font-size: 1rem;
+                        white-space: nowrap;
+                    }
                 }
             }
         }
     }
-}
+
+    .see-more {
+        text-align: center;
+        button {
+        padding: 8px 0;
+        border: 0;
+        background-color: #3880F1;
+            &:hover {
+                background-color: hsla(0, 0%, 73%, 0.397);
+            }
+            a {
+                padding: 8px 30px;
+                text-decoration: none;
+                text-transform: uppercase;
+                color: #fff;
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+        }
+    }
 </style>
