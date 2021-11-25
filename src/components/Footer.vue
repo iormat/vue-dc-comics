@@ -197,17 +197,20 @@ export default {
 
 <style scoped lang="scss">
     footer {
-        margin-top: 330px;
         background-image: url('../assets/img/footer-bg.jpg');
         background-size: cover;
         color: #fff;
     }
     .foot_up {
         display: flex;
-        & .footer-nav {
-            display: flex;
-            & h3 {
-                margin: 20px 0;
+        & .footup-left {
+            width: 50%;
+            padding: 30px 0;
+            & .footer-nav {
+                display: flex;
+                & h3 {
+                    margin: 20px 0;
+                }
             }
         }
         & nav {
@@ -217,10 +220,6 @@ export default {
             text-decoration: none;
             color: #878585;
             font-size:.8rem
-        }
-        & .footup-left {
-            width: 50%;
-            padding: 30px 0;
         }
         & nav ul li {
             list-style: none;
@@ -245,6 +244,7 @@ export default {
             align-items: center;
 
             & button a {
+                padding: 10px;
                 color: #fff;
                 text-decoration: none;
                 font-size: 1.2rem;
@@ -257,9 +257,6 @@ export default {
                 align-items: center;
                 & h3 {
                     margin-right: 10px;
-                }
-                & img {
-                    margin: 10px;
                 }
             }
         }
