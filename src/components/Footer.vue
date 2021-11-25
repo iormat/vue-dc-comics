@@ -120,7 +120,6 @@ export default {
                     url : "#",
                     text : "shop dc collectibles",
                 },
-
             ],
             dcArr : [
                 {
@@ -157,7 +156,7 @@ export default {
                 },
                 {
                     url : "#",
-                    text : "Ratinas",
+                    text : "Ratings",
                 },
                 {
                     url : "#",
@@ -183,7 +182,7 @@ export default {
                 },
                 {
                     url : "#",
-                    text : "DE Universe",
+                    text : "DC Universe",
                 },
                 {
                     url : "#",
@@ -201,6 +200,7 @@ export default {
         background-size: cover;
         color: #fff;
     }
+
     .foot_up {
         display: flex;
         & .footup-left {
@@ -210,17 +210,24 @@ export default {
                 display: flex;
                 & h3 {
                     margin: 20px 0;
+                    font-size: 1.2rem
                 }
             }
         }
         & nav {
             margin: 0 30px;
         }
-        & a {
+        a {
+            text-transform: capitalize;
             text-decoration: none;
             color: #878585;
-            font-size:.8rem
+            font-size:.8rem;
         }
+        a:hover {
+            text-decoration: underline;
+        }
+
+
         & nav ul li {
             list-style: none;
         }
@@ -242,9 +249,15 @@ export default {
             justify-content: space-between;
             flex-flow: row nowrap;
             align-items: center;
-
+            button {
+                background-color: transparent;
+                &:hover {
+                    background-color: hsl(0, 0%, 50%);
+                    cursor: pointer;
+                }
+            }
             & button a {
-                padding: 10px;
+                padding: 10px 15px;
                 color: #fff;
                 text-decoration: none;
                 font-size: 1.2rem;
@@ -257,6 +270,9 @@ export default {
                 align-items: center;
                 & h3 {
                     margin-right: 10px;
+                }
+                & a {
+                    margin: 10px;
                 }
             }
         }

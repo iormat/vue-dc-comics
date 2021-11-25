@@ -1,19 +1,20 @@
 <template>
     <header>
-        <div class="container-center">
-            <section>
+        <div class="top-bar">
+            <div class="container-center">
                 <img src="../assets/img/dc-logo.png" alt="">
-            </section>
-            <section class="header-nav">
-                <nav>
-                    <ul>
-                        <li v-for="(link, i) in links" :key="i"> 
-                            <a :class="link.selected ? 'active' : '' " href="link.url">{{ link.text }}</a> 
-                        </li>
-                    </ul>
-                </nav>
-            </section>
+                <section class="header-nav">
+                    <nav>
+                        <ul>
+                            <li v-for="(link, i) in links" :key="i"> 
+                                <a :class="link.selected ? 'active' : '' " href="link.url">{{ link.text }}</a> 
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+            </div>
         </div>
+        <section id="jumbo"></section>
     </header>
 </template>
 
@@ -81,7 +82,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-    header {
+    .top-bar {
         background-color: #fff;
         padding: 20px 0;
         position: fixed;
@@ -89,6 +90,7 @@ export default {
         left: 0;
         right: 0;
         z-index: 2;
+
     }
     .container-center {
         display: flex;
@@ -113,5 +115,14 @@ export default {
             color: #377AE4;
             border-bottom: 3px solid #377AE4;
         }
+    }
+
+    #jumbo {
+        background-image: url('../assets/img/jumbotron.jpg');
+        background-position: top;
+        background-size: cover;
+        height: 500px;
+        position: relative;
+        top: 100px;
     }
 </style>
